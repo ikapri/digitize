@@ -1,10 +1,82 @@
 <html>
 	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link href='{{url_for("static",filename="css/bootstrap.css")}}' rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="{{url_for('static', filename='css/font-awesome.css')}}" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
-<form method="post" enctype="multipart/form-data">
-<input type="file" name="cheque">
-<input type='submit'>
+    <div class="navbar navbar-inverse set-radius-zero" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+
+                    <a href="http://www.nullpointer.in/"><img src="/static/img/logo.png" /></a>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                            <li><a href="https://s3.ap-south-1.amazonaws.com/cheque-in/Dataset.zip" >Download Cheque DataSet</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 align="center" class="header-line fa-2x"><a href="http://www.nullpointer.in/">NP</a> Cheque-In</h4>
+
+                            </div>
+
+        </div>
+
+
+        <form enctype="multipart/form-data" method="post">
+  <div class="form-group">
+    <label for="chq">Upload Cheque</label>
+    <input type="file" class="form-control" id="chq" name="cheque">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
+
+    </div>
+    </div>
+    <br/>
+     <!-- CONTENT-WRAPPER SECTION END-->
+    <section class="footer-section">
+        <div class="container">
+        </div>
+    </section>
+      <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="/static/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="/static/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="/static/js/custom.js"></script>
 </body>
 </html>
